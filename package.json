@@ -75,6 +75,9 @@
     "truffle-flattener": "^1.5.0"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "4.0.0"
+    "@openzeppelin/contracts": "4.0.0",
+    "bn.js": "^5.2.0",
+    "install": "^0.13.0",
+    "npm": "^7.9.0"
   }
 }
