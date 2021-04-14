@@ -1,5 +1,5 @@
-/* global Web3 */
-// const BN = require('bn.js');
+
+// NOTE: 6 decimala!!!
 
 const App = {
   coinbase: null,
@@ -54,7 +54,8 @@ const App = {
     var neededEther = this.web3.utils.toWei('0.000025', 'ether')
     // var oneEther
     // this.web3.utils.toWei("0.5", "ether")
-    console.log("nula jhedan:" + this.web3.utils.toWei('0.1', 'ether'))
+    var decimalValue = '0.000001'
+    console.log("nula jhedan:" + this.web3.utils.toWei(decimalValue, 'ether'))
     console.log(neededEther)
     //value: this.web3.utils.toHex(new this.web3.utils.BN(0.00001))
     // console.log(new BN("0.00001"))
@@ -66,7 +67,7 @@ const App = {
       // gas: '0x2710', // customizable by user during MetaMask confirmation.
       to: '0xe0c2dEa0F73FEe0E422D181B058951bfd679265d', // Required except during contract publications.
       from: this.web3Provider.selectedAddress, // must match user's active address.
-      value: this.web3.utils.toHex(this.web3.utils.toWei('0.0001', 'ether'))
+      value: this.web3.utils.toHex(this.web3.utils.toWei(decimalValue, 'ether'))
       // data:'0x7f7465737432000000000000000000000000000000000000000000000000000000600057', // Optional, but used for defining smart contract creation and interaction.
       // chainId: '0x3', // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
     };
